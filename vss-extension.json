@@ -1,0 +1,42 @@
+{
+    "manifestVersion": 1,
+    "id": "ac1f75f1-98c5-4415-a210-3ad9ca9d6ecd",
+    "version": "0.0.2",
+    "name": "Fortify On Demand Reporting",
+    "description": "This task reports on the lastest Fortify On Demand Static Scan Vulnerbilites",
+    "publisher": "cpateman",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "icon.png"        
+    },
+    "files": [
+        {
+            "path": "buildAndReleaseTask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildAndReleaseTask"
+            }
+        }
+    ],
+    "public": true
+}
