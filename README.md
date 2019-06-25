@@ -13,7 +13,7 @@ Please configure the task variables as below:
 **Fortify Details**
 
 Release ID = The Release ID of the scans to validate against.<br/>
-API URL = The Data Centers URL for the API Layer - (API URL Options)[https://emea.fortify.com/Docs/en/index.htm#Additional_Services/API/API_About.htm%3FTocPath%3DAPI%7C_____0]
+API URL = The Data Centers URL for the API Layer - [API URL Options](https://emea.fortify.com/Docs/en/index.htm#Additional_Services/API/API_About.htm%3FTocPath%3DAPI%7C_____0)
 
 **Vulnerbilities Limites**
 

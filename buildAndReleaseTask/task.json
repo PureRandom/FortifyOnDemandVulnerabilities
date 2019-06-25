@@ -13,7 +13,7 @@
     "version": {
         "Major": "0",
         "Minor": "0",
-        "Patch": "7"
+        "Patch": "10"
     },
     "minimumAgentVersion": "1.95.0",
     "instanceNameFormat": "Fortify On Demand Reporting $(message)",
@@ -42,14 +42,14 @@
             "name": "apiUrl",
             "type": "pickList",
             "label": "API URL",
-            "defaultValue": "EMEA",
+            "defaultValue": "",
             "required": true,
             "helpMarkDown": "Program working directory",
             "options": {
-                "US": "https://api.ams.fortify.com",
-                "EMEA": "https://api.emea.fortify.com",
-                "APAC": "https://api.apac.fortify.com",
-                "FedRAMP": "https://api.fed.fortify.com"
+                "https://api.ams.fortify.com": "US",
+                "https://api.emea.fortify.com": "EMEA" ,
+                "https://api.apac.fortify.com":"APAC",
+                "https://api.fed.fortify.com": "FedRAMP"
             }
         },
         {
@@ -104,12 +104,12 @@
             "name": "alertLevel",
             "type": "pickList",
             "label": "Alert Level",
-            "defaultValue": "Error",
+            "defaultValue": "error",
             "required": false,
             "helpMarkDown": "'error' to escape on breach or 'warning' to only alert on breach",
             "options": {
-                "Error": "error",
-                "Warning": "warning"
+                "error":"Error",
+                "warning":"Warning"
             },
             "groupName": "reporting"
         },
@@ -121,8 +121,8 @@
             "required": false,
             "helpMarkDown": "'results' to print out only the results of the scan or 'verbose' to print out the full response.",
             "options": {
-                "Results": "results",
-                "Verbose": "verbose"
+                "results":"Results",
+                "verbose": "Verbose"
             },
             "groupName": "reporting"
         }

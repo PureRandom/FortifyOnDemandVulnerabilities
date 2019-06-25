@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "ac1f75f1-98c5-4415-a210-3ad9ca9d6ecd",
-    "version": "0.0.7",
+    "version": "0.0.10",
     "name": "Fortify On Demand Reporting",
     "description": "This task reports on the lastest Fortify On Demand Static Scan Vulnerbilites",
     "publisher": "cpateman",

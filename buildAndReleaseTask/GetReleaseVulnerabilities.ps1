@@ -21,7 +21,6 @@ try {
     [string]$reportingLevel = Get-VstsInput -Name reportingLevel
 
     ## Import Required's
-    Import-Module "$PSScriptRoot\AuthenticationTokens.psm1"
     [System.Net.WebRequest]::DefaultWebProxy = [System.Net.WebRequest]::GetSystemWebProxy()
     [System.Net.WebRequest]::DefaultWebProxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
 
@@ -32,6 +31,28 @@ try {
     [int]$global:lowCount = 0
     [int]$global:bestPracticeCount = 0
     [int]$global:infoCount = 0
+
+    function Get-Auth ([string]$apiKey, [string]$apiSecret, [string]$scope, [string]$apiUrl) {
+
+        ## Create URL
+        $url = "$apiUrl/oauth/token"
+        Write-Host "Authentication URL: $url"
+    
+        ## Set Authorisation
+        $body = @{
+            scope         = "$scope"
+            grant_type    = "client_credentials"
+            client_id     = "$apiKey"
+            client_secret = "$apiSecret"
+        }
+    
+        ## Request
+        $response = Invoke-RestMethod -ContentType "application/x-www-form-urlencoded" -Uri $url -Method POST -Body $body -UseBasicParsing
+    
+        return $response.access_token
+    
+    }
+
 
     function Map-Severity-Level([int]$severityNumber) {
 
