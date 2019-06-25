@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "ac1f75f1-98c5-4415-a210-3ad9ca9d6ecd",
-    "version": "0.0.2",
+    "version": "0.0.7",
     "name": "Fortify On Demand Reporting",
     "description": "This task reports on the lastest Fortify On Demand Static Scan Vulnerbilites",
     "publisher": "cpateman",
@@ -10,13 +10,20 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],
+    "tags": [
+        "fortify",
+        "security",
+        "DevSecOps",
+        "vulnerabilities"
+    ],
     "content": {
         "details": {
             "path": "README.md"
         }
     },
     "categories": [
-        "Azure Pipelines"
+        "Azure Pipelines",
+        "Azure Artifacts"
     ],
     "icons": {
         "default": "icon.png"        
@@ -26,6 +33,21 @@
             "path": "buildAndReleaseTask"
         }
     ],
+    "links": {
+        "home": {
+            "uri": "https://prcode.blog/"
+        },
+        "repository": {
+            "uri": "https://github.com/PureRandom/FortifyOnDemandVulnerabilities"
+        },
+        "issues": {
+            "uri": "https://github.com/PureRandom/FortifyOnDemandVulnerabilities/issues"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/PureRandom/FortifyOnDemandVulnerabilities"
+    },
     "contributions": [
         {
             "id": "custom-build-release-task",

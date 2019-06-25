@@ -13,7 +13,7 @@
     "version": {
         "Major": "0",
         "Minor": "0",
-        "Patch": "1"
+        "Patch": "7"
     },
     "minimumAgentVersion": "1.95.0",
     "instanceNameFormat": "Fortify On Demand Reporting $(message)",
@@ -129,7 +129,7 @@
     ],
     "execution": {
         "PowerShell3": {
-            "target": "GetReleaseVulnerbilities.ps1"
+            "target": "GetReleaseVulnerabilities.ps1"
         }
     }
 }
